@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor in javascript</title>
+</head>
+
+<body>
+    <script>
+        class ratro {
+            constructor(givenname, trainno, address, time) {
+                console.log("constructor called ... " + givenname + "" + trainno  );
+                this.name = givenname
+                this.trainno = trainno
+                this.address = address
+                this.time = time
+            }
+            preview() {
+                console.log(this.name+" ratro is no is "+this.trainno+" and your address is "+this.address+" your time is "+this.time);
+            }
+            submit() {
+                console.log("ratro is submitted");
+            }
+            cancel() {
+                console.log("ratro is canceles");
+                this.trainno = 0
+                this.time = "your from is canceled "
+            }
+        }
+
+        let arun = new ratro("adinath",34242,"new york,ward no 6 ,nordhan branch morge wasti pin code : 229234","10:00pm")
+
+        arun.preview()
+        arun.submit()
+        arun.cancel()
+        arun.preview()
+    </script>
+</body>
+
+</html>
